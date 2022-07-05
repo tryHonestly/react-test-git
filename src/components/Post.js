@@ -10,12 +10,13 @@ const Post = ({post}) => {
       border: `solid 2px black`,
       display:`flex`,
       flexDirection:`column`,
-      gap:`5px`
-
+      gap:`5px`,
+      backgroundColor:`wheat`,
+      fontSize:25
     }}>
-      <p>{post.name}</p>
-      <p>{post.email}</p>
-      <p>{post.body}</p>
+      <h2>{post.name}</h2>
+      <i>{post.email}</i>
+      <b>{post.body}</b>
       <p>{post.id}</p>
       
 
