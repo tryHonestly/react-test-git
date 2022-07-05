@@ -1,8 +1,9 @@
 import React from 'react'
 
 
-const Post = (post) => {
+const Post = ({post}) => {
 
+  console.log(post);
  
   return (
     <div style={{
@@ -12,10 +13,11 @@ const Post = (post) => {
       gap:`5px`
 
     }}>
-      <p>іфвфі</p>
-      <p>іфвфі</p>
-      <p>іфвфі</p>
-      <p>іфвфі</p>
+      <p>{post.name}</p>
+      <p>{post.email}</p>
+      <p>{post.body}</p>
+      <p>{post.id}</p>
+      
 
     </div>
   )
