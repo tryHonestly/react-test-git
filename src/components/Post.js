@@ -15,8 +15,13 @@ const Post = ({post}) => {
       fontSize:25
     }}>
       <h2>{post.name}</h2>
+	  <br/>
       <i>{post.email}</i>
+	  <br/>
+
       <b>{post.body}</b>
+	  <br/>
+
       <p>{post.id}</p>
       
 
