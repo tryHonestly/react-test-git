@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Post = ({post}) => {
+const Post = ({post, clickHandlerRemovePost}) => {
 
   
  
@@ -19,7 +19,7 @@ const Post = ({post}) => {
       <b>{post.body}</b>
       <p>{post.id}</p>
       
-
+      <button onClick={() => {clickHandlerRemovePost(post.id)}}>X</button>
     </div>
   )
 }

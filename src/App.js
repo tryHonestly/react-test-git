@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   console.log(postValue);
-  const clickHandler = () => {
+  const clickHandlerAddPost = () => {
     const newPost = {
       body: postValue,
       email: "TEST@TEST",
@@ -38,15 +38,19 @@ function App() {
     }
     setPosts([...posts, newPost])
   }
+  const clickHandlerRemovePost = (id) => {
+    
+    setPosts([...posts.filter(post => post.id !== id)])
+  }
   return (
     <div className="App">
       <div>
         <h1>add post</h1>
         <input type="text" value={postValue} onChange={(e) => {setPostValue(e.target.value)}}/>
-        <button onClick={clickHandler}>add</button>
+        <button onClick={clickHandlerAddPost}>add</button>
       </div>
 
-      {posts.map(p => <Post post={p} key={p.id}/>)}
+      {posts.map(p => <Post clickHandlerRemovePost={clickHandlerRemovePost}  post={p} key={p.id}/>)}
     </div>
   );
 }
